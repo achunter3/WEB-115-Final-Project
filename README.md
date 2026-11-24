@@ -33,11 +33,10 @@
   - Tony is taking a trip to the Triangle. He is on a mission to learn about the cities that make up the triangle and visit as many museums as possible.
 
 ### Gameplay
-[Describe how the player moves through the story: choices, puzzles, etc.]
-**In Development**
+The player will use directional buttons to cycle through options (such as moving locations). Once the player gets to a location, they will be given information about the place and given a puzzle or riddle to solve. Once they get the solution they will be given a stamp for the location, marking it complete. 
 
 ### Endings
-The player must visit at least one museum in each city before they can end the day. The ending depends on which city they are in when they end it.
+The player must visit and get a stamp at least one museum in each city before they can end the day. The ending depends on which city they are in when they end it.
 1. **Raleigh Ending:** [What happens]
 2. **Durham Ending:** [What happens]
 3. **Chapel Hill Ending:**  [What happens]
@@ -87,13 +86,13 @@ flowchart TD
 | START | RDU Airport: Plan the Day | — | | Raleigh, Durham, Chapel Hill | Default image (map of the Triangle) | |
 | RAL | Raleigh (city hub) | Raleigh | | Natural Sciences, NC Museum of Art, travel to Durham / Chapel Hill, End the Day | | |
 | NS | NC Museum of Natural Sciences | Raleigh | | Back to Raleigh | | |
-| NCMA | NC Museum of Art | Raleigh | | Back to Raleigh | e.g. ticket code input + regex | |
+| NCMA | NC Museum of Art | Raleigh | | Back to Raleigh | | |
 | DUR | Durham (city hub) | Durham | | Life and Science, Nasher, travel to Raleigh / Chapel Hill, End the Day | | |
 | MLS | Museum of Life and Science | Durham | | Back to Durham | | |
 | NAS | Nasher Museum of Art | Durham | | Back to Durham | | |
 | CH | Chapel Hill (city hub) | Chapel Hill | | Ackland, Botanical Garden, travel to Raleigh / Durham, End the Day | | |
 | ACK | Ackland Art Museum | Chapel Hill | | Back to Chapel Hill | | |
-| BOT | NC Botanical Garden | Chapel Hill | | Back to Chapel Hill | e.g. bird sound effect | |
+| BOT | NC Botanical Garden | Chapel Hill | | Back to Chapel Hill | | |
 | E1 | Raleigh Ending | Raleigh | | (TO DO) | | |
 | E2 | Durham Ending | Durham | | (TO DO) | | |
 | E3 | Chapel Hill Ending | Chapel Hill | | (TO DO) | | |
