@@ -10,14 +10,14 @@
 
 | Name                    | GitHub Username | Responsibilities        | Git Branch     |
 |-------------------------|-----------------|-------------------------|----------------|
-| Aaron Hunter            | @achunter3      | Story writing, README   | development-AH |
-| Asante Malik Boler      | [@taedadev]     | [ ]                     | [branch-name]  |
-| Taylor James Remington  | [@username]     | [ ]                     | [branch-name]  |
+| Aaron Hunter            | @achunter3      | Story writing, README, Feature deveopment   | development-AH |
+| Asante Malik Boler      | @taedadev       | Styling, Imagry, Story  | deveopment-AB  |
+| Taylor James Remington  | @tremington1k   | HTML, Base JS Functionality | deveopment-TR  |
 
 **How we communicated:** 
 - Email
 - Blackboard
-- Microsoft Teams 
+- Microsoft Teams (Messenger and Voice)
 ---
 
 ## 2. Genre Blend
@@ -37,10 +37,9 @@ The player will use directional buttons to cycle through options (such as moving
 
 ### Endings
 The player must visit and get a stamp at least one museum in each city before they can end the day. The ending depends on which city they are in when they end it.
-1. **Raleigh Ending:** [What happens]
-2. **Durham Ending:** [What happens]
-3. **Chapel Hill Ending:**  [What happens]
-4. *(optional secret ending)*: [e.g. visit all 6 museums]
+1. **Raleigh Ending:** Night Skyline of Raleigh
+2. **Durham Ending:** Night Skyline of Durham 
+3. **Chapel Hill Ending:**  Night Skyline of Chapel Hill
 
 ---
 
@@ -93,8 +92,8 @@ flowchart TD
 | CH | Chapel Hill (city hub) | Chapel Hill | | Ackland, Botanical Garden, travel to Raleigh / Durham, End the Day | | |
 | ACK | Ackland Art Museum | Chapel Hill | | Back to Chapel Hill | | |
 | BOT | NC Botanical Garden | Chapel Hill | | Back to Chapel Hill | | |
-| E1 | Raleigh Ending | Raleigh | | (TO DO) | | |
-| E2 | Durham Ending | Durham | | (TO DO) | | |
-| E3 | Chapel Hill Ending | Chapel Hill | | (TO DO) | | |
+| E1 | Raleigh Ending | Raleigh | | Night Skyline of Raleigh | | |
+| E2 | Durham Ending | Durham | | Night Skyline of Durham | | |
+| E3 | Chapel Hill Ending | Chapel Hill | | Night Skyline of Chapel Hill | | |
 
 ---
