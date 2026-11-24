@@ -242,8 +242,12 @@ button:disabled {
     box-shadow: var(--pop-shadow);
 }
 
-#nextParagraphButton {
+#nextButton {
     background: var(--chapel-blue);
+}
+
+#selectButton {
+    background: #fff;
 }
 
 #backButton {
