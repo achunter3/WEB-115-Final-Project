@@ -11,7 +11,7 @@
 | Name                    | GitHub Username | Responsibilities        | Git Branch     |
 |-------------------------|-----------------|-------------------------|----------------|
 | Aaron Hunter            | @achunter3      | Story writing, README   | development-AH |
-| Asante Malik Boler      | [@username]     | [ ]                     | [branch-name]  |
+| Asante Malik Boler      | [@taedadev]     | [ ]                     | [branch-name]  |
 | Taylor James Remington  | [@username]     | [ ]                     | [branch-name]  |
 
 **How we communicated:** 
