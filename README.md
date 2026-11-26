@@ -1,7 +1,7 @@
-# [Tony Takes a Trip To The Triangle]
+# Tony Takes a Trip To The Triangle
 
 > WEB-115 Final Project: Interactive Browser Story
-> **Live site (GitHub Pages):** [link here]
+> **Live site (GitHub Pages):** https://achunter3.github.io/WEB-115-Final-Project
 > **Repository:** https://github.com/achunter3/WEB-115-Final-Project
 
 ---
@@ -11,8 +11,8 @@
 | Name                    | GitHub Username | Responsibilities        | Git Branch     |
 |-------------------------|-----------------|-------------------------|----------------|
 | Aaron Hunter            | @achunter3      | Story writing, README, Feature deveopment   | development-AH |
-| Asante Malik Boler      | @taedadev       | Styling, Imagry, Story  | deveopment-AB  |
-| Taylor James Remington  | @tremington1k   | HTML, Base JS Functionality | deveopment-TR  |
+| Asante Malik Boler      | @taedadev       | Styling, Imagery, Story  | development-AB  |
+| Taylor James Remington  | @tremington1k   | HTML, Base JS Functionality | development-TR  |
 
 **How we communicated:** 
 - Email
