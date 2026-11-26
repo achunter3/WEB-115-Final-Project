@@ -1,49 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tony Takes a Trip to the Triangle</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <!-- REQUIRED: h1 with the story title -->
-        <h1>Tony Takes a Trip to the Triangle</h1>
+      <!-- REQUIRED: h1 with the story title -->
+      <h1>Tony Takes a Trip to the Triangle</h1>
 
-        <!-- Status bar: location, energy (O), museum countdown (T) -->
-        <div id="status-bar">
-            <span>📍 <span id="location">RDU Airport</span></span>
-            <span class="energy">
-                Energy: <span id="energy-value">100</span>
-                <span id="energy-bar"><span id="energy-fill"></span></span>
-            </span>
-            <span id="timer"></span>
-        </div>
+      <!-- Status bar: location, energy (O), museum countdown (T) -->
+      <div id="status-bar">
+        <span>📍 <span id="location">RDU Airport</span></span>
+        <span class="energy">
+          Energy: <span id="energy-value">100</span>
+          <span id="energy-bar"><span id="energy-fill"></span></span>
+        </span>
+        <span id="timer"></span>
+      </div>
     </header>
     <main>
-        <section id="story">
-            <!-- REQUIRED: image that changes. Tooltip appears on hover (V). -->
-            <div id="image-container">
-                <img id="story-image" src="triangle-map.png" alt="Map of the Triangle">
-                <div id="tooltip"></div>
-            </div>
+      <section id="story">
+        <!-- REQUIRED: image that changes. Tooltip appears on hover (V). -->
+        <div id="image-container">
+          <img
+            id="story-image"
+            src="./images/rdu-airport.jpg"
+            alt="Map of the Triangle"
+          />
+          <div id="tooltip"></div>
+        </div>
 
-            <!-- REQUIRED: 3 paragraphs with ids, filled by a function -->
-            <div id="story-text">
-                <p id="paragraph1">Paragraph 1 content goes here.</p>
-                <p id="paragraph2">Paragraph 2 content goes here.</p>
-                <p id="paragraph3">Paragraph 3 content goes here.</p>
-            </div>
+        <!-- REQUIRED: 3 paragraphs with ids, filled by a function -->
+        <div id="story-text">
+          <p id="paragraph1">Paragraph 1 content goes here.</p>
+          <p id="paragraph2">Paragraph 2 content goes here.</p>
+          <p id="paragraph3">Paragraph 3 content goes here.</p>
+        </div>
 
-            <!-- REQUIRED: buttons with ids -->
-            <div id="nav-buttons">
-                <button id="nextButton">Next ▶</button>
-                <button id="selectButton">Select</button>
-                <button id="backButton">◀ Back</button>
-                <button id="endDayButton">🌙 End the Day</button>
-            </div>
-        </section>
+        <!-- REQUIRED: buttons with ids -->
+        <div id="nav-buttons">
+          <button id="backButton">◀ Back</button>
+          <button id="selectButton">Select</button>
+          <button id="nextButton">Next ▶</button>
+          <button id="endDayButton">End the Day</button>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>
