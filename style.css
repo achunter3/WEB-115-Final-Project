@@ -1,90 +1,89 @@
+
 /* ============================================================
-   Tony Takes a Trip to the Triangle: Styles
-   Theme: matches the cartoon map (cream paper, brown ink,
-   city colors, chunky buttons)
+   Tony Takes a Trip to the Triangle
+   Theme: Cartoon travel adventure
    ============================================================ */
 
-/* Same fonts as the map (loaded from Google Fonts) */
-@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Luckiest+Guy&display=swap");
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Luckiest+Guy&display=swap');
 
-/* ---------- Colors and shared values ---------- */
+/* Colors */
 :root {
     --paper: #f6edc9;
     --paper-light: #fff8e6;
     --paper-dark: #5f583d;
     --ink: #3b2a1a;
+
     --raleigh-red: #e8574a;
     --durham-blue: #3f6fd1;
     --chapel-blue: #5fb7e8;
+
     --gold: #f2b33d;
     --green: #6fae4f;
     --danger: #c8302f;
-    --radius: 16px;
-    --border: 4px solid var(--ink);
-    --pop-shadow: 0 5px 0 var(--ink);
+
+    --radius: 14px;
+    --border: 3px solid var(--ink);
+    --shadow: 0 5px 0 var(--ink);
 }
 
+/* General page styles */
 * {
     box-sizing: border-box;
 }
 
-/* ---------- Page ---------- */
 body {
     margin: 0;
     min-height: 100vh;
     font-family: "Fredoka", "Segoe UI", sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.6;
     color: var(--ink);
     background-color: var(--paper);
-    /* little dot texture, like the map */
-    background-image: radial-gradient(#e3d49b 1.4px, transparent 1.4px);
+    background-image: radial-gradient(#e3d49b 1.2px, transparent 1.2px);
     background-size: 22px 22px;
 }
 
-/* ---------- Header ---------- */
+/* Header */
 header {
     background: var(--paper-dark);
-    border-bottom: var(--border);
-    padding: 1.25rem 1rem 1rem;
+    border-bottom: 4px solid var(--ink);
+    padding: 1.5rem 1rem 1.25rem;
     text-align: center;
-    box-shadow: 0 4px 0 rgba(59, 42, 26, 0.15);
 }
 
 h1 {
-    margin: 0 0 0.75rem;
+    margin: 0 0 1rem;
     font-family: "Luckiest Guy", "Fredoka", sans-serif;
-    font-weight: 400;
     font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 400;
     letter-spacing: 1px;
-    color: var(--danger);
-    /* outlined cartoon text */
+    color: var(--gold);
     text-shadow:
-        3px 3px 0 var(--ink),
+        2px 2px 0 var(--ink),
         -1px -1px 0 var(--ink),
         1px -1px 0 var(--ink),
         -1px 1px 0 var(--ink);
 }
 
-/* ---------- Status bar ---------- */
+/* Status bar */
 #status-bar {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.75rem 1.25rem;
+    gap: 0.75rem;
     font-weight: 600;
 }
 
-/* each status item looks like a little badge */
 #status-bar > span {
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    background: #fff;
-    border: 3px solid var(--ink);
-    border-radius: 999px;
-    padding: 0.2rem 0.9rem;
+    gap: 0.45rem;
+    background: var(--paper-light);
+    border: 2px solid var(--ink);
+    border-radius: 30px;
+    padding: 0.35rem 0.85rem;
 }
 
 #location {
@@ -98,63 +97,61 @@ h1 {
 
 #energy-bar {
     display: inline-block;
-    width: 110px;
-    height: 14px;
-    background: #eee3c0;
-    border: 2px solid var(--ink);
-    border-radius: 999px;
+    width: 100px;
+    height: 13px;
     overflow: hidden;
+    background: #e5dcc2;
+    border: 2px solid var(--ink);
+    border-radius: 20px;
 }
 
 #energy-fill {
     display: block;
-    width: 100%;          /* JS changes this to match energy */
+    width: 100%;
     height: 100%;
     background: var(--green);
     transition: width 0.4s ease, background-color 0.4s ease;
-}
-
-/* timer badge only shows when it has text in it */
-#status-bar > #timer:empty {
-    display: none;
 }
 
 #timer {
     color: var(--danger);
 }
 
-/* ---------- Main layout ---------- */
+#status-bar > #timer:empty {
+    display: none;
+}
+
+/* Main content */
 main {
-    max-width: 900px;
-    margin: 1.5rem auto 2.5rem;
-    padding: 0 1rem;
+    width: min(100% - 2rem, 900px);
+    margin: 2rem auto;
 }
 
 #story {
-    background: var(--paper-light);
-    border: var(--border);
-    border-radius: var(--radius);
-    box-shadow: 0 8px 0 rgba(59, 42, 26, 0.2);
     padding: 1.25rem;
+    background: var(--paper-light);
+    border: 4px solid var(--ink);
+    border-radius: var(--radius);
+    box-shadow: 0 7px 0 rgba(59, 42, 26, 0.2);
 }
 
-/* ---------- Story image ---------- */
+/* Story image */
 #image-container {
-    position: relative;   /* lets the tooltip sit on top of the image */
+    position: relative;
 }
 
 #story-image {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;     /* every scene image is the same shape */
-    object-fit: cover;        /* fills the box without stretching */
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #eee3c0;
     border: var(--border);
-    border-radius: 12px;
-    background: #eee3c0;      /* shows while the image is loading */
+    border-radius: 10px;
     cursor: help;
 }
 
-/* Tooltip: hidden by default, JS shows it on mouseover */
+/* Image tooltip */
 #tooltip {
     display: none;
     position: absolute;
@@ -162,25 +159,25 @@ main {
     bottom: 16px;
     transform: translateX(-50%);
     width: min(90%, 520px);
+    padding: 0.65rem 1rem;
     background: #fff;
-    border: 3px solid var(--ink);
-    border-radius: 12px;
-    box-shadow: var(--pop-shadow);
-    padding: 0.6rem 0.9rem;
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
     font-size: 0.95rem;
     text-align: center;
-    pointer-events: none;     /* so it doesn't block the mouse */
+    pointer-events: none;
 }
 
-/* ---------- Story text ---------- */
+/* Story text */
 #story-text {
-    margin-top: 1.25rem;
-    background: #fff;
-    border: 3px solid var(--ink);
-    border-left: 10px solid var(--chapel-blue);
-    border-radius: 12px;
-    padding: 1rem 1.25rem;
     min-height: 120px;
+    margin-top: 1.25rem;
+    padding: 1rem 1.25rem;
+    background: #fff;
+    border: 2px solid var(--ink);
+    border-left: 8px solid var(--chapel-blue);
+    border-radius: 10px;
 }
 
 #story-text p {
@@ -191,91 +188,103 @@ main {
     margin-bottom: 0;
 }
 
-/* hide paragraphs that have no text yet */
 #story-text p:empty {
     display: none;
 }
 
-/* ---------- Buttons ---------- */
+/* Navigation buttons */
 #nav-buttons {
     display: flex;
-    align-items: flex-start;
-    gap: 0.9rem;
+    align-items: stretch;
+    gap: 0.85rem;
     margin-top: 1.25rem;
 }
 
 #choice-buttons {
     display: grid;
     flex: 1;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
-    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.85rem;
 }
 
 #choice-buttons button {
     width: 100%;
 }
 
+/* All buttons */
 button {
+    padding: 0.65rem 1.2rem;
     font-family: "Fredoka", sans-serif;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--ink);
     background: #fff;
     border: 3px solid var(--ink);
-    border-radius: 12px;
-    padding: 0.6rem 1.3rem;
-    box-shadow: var(--pop-shadow);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
     cursor: pointer;
-    transition: transform 0.08s, box-shadow 0.08s, background-color 0.2s;
+    transition: transform 0.1s ease, box-shadow 0.1s ease,
+        background-color 0.2s ease;
 }
 
-button:hover {
+button:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: 0 7px 0 var(--ink);
 }
 
-/* "pressed" effect */
-button:active {
+button:active:not(:disabled) {
     transform: translateY(4px);
     box-shadow: 0 1px 0 var(--ink);
 }
 
 button:focus-visible {
     outline: 3px dashed var(--durham-blue);
-    outline-offset: 3px;
+    outline-offset: 4px;
 }
 
 button:disabled {
     opacity: 0.45;
     cursor: not-allowed;
-    transform: none;
-    box-shadow: var(--pop-shadow);
+    box-shadow: var(--shadow);
 }
 
 #backButton {
+    flex-shrink: 0;
     background: var(--gold);
-    flex: 0 0 auto;
 }
 
 #endDayButton {
-    background: var(--raleigh-red);
+    flex-shrink: 0;
     color: #fff;
+    background: var(--raleigh-red);
 }
 
-/* Add this class with JS to hide anything:
-   element.classList.add("hidden") */
+/* Utility class used by JavaScript */
 .hidden {
     display: none !important;
 }
 
-/* ---------- Small screens ---------- */
+/* Mobile layout */
 @media (max-width: 600px) {
     body {
         font-size: 1rem;
     }
 
+    header {
+        padding: 1rem 0.75rem;
+    }
+
+    main {
+        width: min(100% - 1rem, 900px);
+        margin: 1rem auto;
+    }
+
     #story {
         padding: 0.75rem;
+    }
+
+    #story-text {
+        padding: 0.85rem;
     }
 
     #nav-buttons {
@@ -284,10 +293,10 @@ button:disabled {
 
     #choice-buttons {
         width: 100%;
+        grid-template-columns: 1fr;
     }
 
     #nav-buttons button {
-        flex: 1 1 100%;
         width: 100%;
     }
 }
